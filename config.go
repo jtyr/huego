@@ -35,7 +35,7 @@ type Config struct {
 // SwUpdate contains information related to software updates. Deprecated in 1.20
 type SwUpdate struct {
 	CheckForUpdate bool        `json:"checkforupdate,omitempty"`
-	DeviceTypes    DeviceTypes `json:"devicetypes,omitempty"`
+	DeviceTypes    DeviceTypes `json:"devicetypes"`
 	UpdateState    uint8       `json:"updatestate,omitempty"`
 	Notify         bool        `json:"notify,omitempty"`
 	URL            string      `json:"url,omitempty"`
@@ -55,9 +55,9 @@ type SwUpdate2 struct {
 
 // DeviceTypes details the type of updates available
 type DeviceTypes struct {
-	Bridge  bool     `json:"bridge,omitempty"`
-	Lights  []string `json:"lights,omitempty"`
-	Sensors []string `json:"sensors,omitempty"`
+	Bridge  bool     `json:"bridge"`
+	Lights  []string `json:"lights"`
+	Sensors []string `json:"sensors"`
 }
 
 // BridgeConfig holds information about software updates
